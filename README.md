@@ -10,6 +10,6 @@ O projeto utiliza NPM como gerenciador de pacotes padrão.
 
 Digite o comando abaixo para iniciar o servidor local deste projeto:
 
-### `yarn start`
+### `yarn start ou npm start`
 
 O servidor abrirá uma aba automaticamente por padrão, mas para faze-lo manualmente acesse: http://localhost:3000 no seu navegador.
