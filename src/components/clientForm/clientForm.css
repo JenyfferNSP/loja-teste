@@ -1,0 +1,30 @@
+.formControl {
+    display: inline-flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.space-between {
+    margin-right: 10px;
+}
+
+.input-name, .input-email {
+    width: 39vw;
+}
+
+.select {
+    width: 15vw;
+}
+
+.footer {
+    display: block;
+    text-align: end;
+    color: #546e7a;
+}
+
+.MuiButton-contained {
+    text-transform: uppercase;
+    font-weight: bold!important;
+    background-color: orange!important;
+    color: white!important;
+}
