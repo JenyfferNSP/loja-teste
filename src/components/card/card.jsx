@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./card.css";
 import produtos from "../../produtos";
 import Card from "@material-ui/core/Card";
@@ -12,12 +12,8 @@ import RemoveCircleIcon from "@material-ui/icons/RemoveCircle";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import { useSelector, useDispatch } from 'react-redux';
 
-function CardItem() {
-  const dispatch = useDispatch();
-  const counter = useSelector(state => state.product);
- 
+function CardItem({inputItems}) {
     return (
       <div className="cardBox" >
         {produtos.map((produto, index) => {
@@ -26,22 +22,22 @@ function CardItem() {
               <Card className="card-background">
                 <CardContent>
                   <CardMedia
-                    style={{ height: "250px",paddingTop :"1px" }}
+                    style={{ height: "250px", objectFit: "contain" }}
                     component="img"
                     image={produto.path}
                   />
                   <Typography className="cardTitle">{produto.nome}</Typography>
                   <div className="actionBox">
-                    <IconButton onClick={() => { dispatch(removeProduct("ADD_PRODUCT", counter))}}>
+                    <IconButton onClick={() => {}} >
                       <RemoveCircleIcon />
                     </IconButton>
                     <form noValidate autoComplete="off">
                       <TextField
                         id="standard-basic-input"
-                        value={counter}
+                        value={inputItems}
                       ></TextField>
                     </form>
-                    <IconButton onClick={() => { dispatch(addProduct("ADD_PRODUCT", counter))}}>
+                    <IconButton onClick={() => {}}>
                       <AddCircleIcon />
                     </IconButton>
                   </div>
@@ -56,5 +52,10 @@ function CardItem() {
       </div>
     );
 }
+function mapStatetoProps(state){
+  return {
+    inputItems: state.products
+  }
 
-export default CardItem;
+}
+export default connect(mapStatetoProps)(CardItem);

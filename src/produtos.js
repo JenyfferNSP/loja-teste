@@ -1,3 +1,5 @@
+import { airPodsImg, appleWatchImg, applePencilImg, caboUSBCImg, magicMouseImg, carregadorUSBImg, capaSiliconeImg, smartKeyboardImg } from './constImages';
+
 const produtos = [
     {
       nome: "AirPods Apple",
@@ -5,7 +7,7 @@ const produtos = [
       valor: 1499,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/air-pods.jpeg",
+      path: airPodsImg,
     },
     {
       nome: "Capa de Silicone para IPhone 8/7",
@@ -13,7 +15,7 @@ const produtos = [
       valor: 299,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/capa-silicone.jpeg",
+      path: capaSiliconeImg,
     },
     {
       nome: "Apple Pencil",
@@ -21,7 +23,7 @@ const produtos = [
       valor: 729,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/apple-pencil.jpeg",
+      path: applePencilImg,
     },
     {
       nome: "Magic Mouse 2",
@@ -29,7 +31,7 @@ const produtos = [
       valor: 549,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/magic-mouse-2.jpeg",
+      path: magicMouseImg,
     },
     {
       nome: "Apple Watch",
@@ -37,7 +39,7 @@ const produtos = [
       valor: 2899,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/apple-watch.jpeg",
+      path: appleWatchImg,
     },
     {
       nome: "Cabo USB Type-C",
@@ -45,7 +47,7 @@ const produtos = [
       valor: 149,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/cabo-usbc.jpeg",
+      path: caboUSBCImg,
     },
     {
       nome: "Smart Keyboard para Ipad Pro",
@@ -53,7 +55,7 @@ const produtos = [
       valor: 1099,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/smart-keyboard.jpeg",
+      path: smartKeyboardImg,
     },
     {
       nome: "Carregador USB",
@@ -61,7 +63,7 @@ const produtos = [
       valor: 149,
       desconto: 10,
       parcelas: 12,
-      path: "src/img/carregador-usb.jpeg",
+      path: carregadorUSBImg,
     },
   ];
 
