@@ -1,0 +1,26 @@
+.background {
+    background-color: #eceff1;
+    width: 100vw;
+    height: 100vh;
+}
+
+#card {
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    top: 19vh;
+    left: 40vw;
+}
+
+#endButton {
+    text-transform: uppercase;
+    font-weight: bold!important;
+    background-color: orange!important;
+    color: white!important;
+    left: 12%;
+}
+
+#link{
+    text-decoration: none;
+    color: white!important;
+}

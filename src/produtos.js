@@ -4,7 +4,7 @@ const produtos = [
     {
       nome: "AirPods Apple",
       descricao: "Fones de Ouvido",
-      valor: 1499,
+      valor: 1499.00,
       desconto: 10,
       parcelas: 12,
       path: airPodsImg,
@@ -12,7 +12,7 @@ const produtos = [
     {
       nome: "Capa de Silicone para IPhone 8/7",
       descricao: "cor areia, rosa",
-      valor: 299,
+      valor: 299.00,
       desconto: 10,
       parcelas: 12,
       path: capaSiliconeImg,
@@ -20,7 +20,7 @@ const produtos = [
     {
       nome: "Apple Pencil",
       descricao: "",
-      valor: 729,
+      valor: 729.00,
       desconto: 10,
       parcelas: 12,
       path: applePencilImg,
@@ -28,7 +28,7 @@ const produtos = [
     {
       nome: "Magic Mouse 2",
       descricao: "Prateado",
-      valor: 549,
+      valor: 549.00,
       desconto: 10,
       parcelas: 12,
       path: magicMouseImg,
@@ -36,7 +36,7 @@ const produtos = [
     {
       nome: "Apple Watch",
       descricao: "Caixa prateada de alumínio com pulseira esportiva branca",
-      valor: 2899,
+      valor: 2899.00,
       desconto: 10,
       parcelas: 12,
       path: appleWatchImg,
@@ -44,7 +44,7 @@ const produtos = [
     {
       nome: "Cabo USB Type-C",
       descricao: "Cabo de lighting para USB (1m)",
-      valor: 149,
+      valor: 149.00,
       desconto: 10,
       parcelas: 12,
       path: caboUSBCImg,
@@ -52,7 +52,7 @@ const produtos = [
     {
       nome: "Smart Keyboard para Ipad Pro",
       descricao: "12,9 polegadas, inglês(EUA)",
-      valor: 1099,
+      valor: 1099.00,
       desconto: 10,
       parcelas: 12,
       path: smartKeyboardImg,
@@ -60,7 +60,7 @@ const produtos = [
     {
       nome: "Carregador USB",
       descricao: "de 5w da Apple",
-      valor: 149,
+      valor: 149.00,
       desconto: 10,
       parcelas: 12,
       path: carregadorUSBImg,

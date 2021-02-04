@@ -6,6 +6,7 @@ import capaSilicone from './img/capa-silicone.jpeg'
 import carregadorUSB from './img/carregador-usb.jpeg'
 import magicMouse from './img/magic-mouse-2.jpeg'
 import smartKeyboard from './img/smart-keyboard.jpeg';
+import purchase from './img/purchase.png'
 
 export const airPodsImg = airPod;
 export const appleWatchImg = appleWatch;
@@ -14,5 +15,6 @@ export const  caboUSBCImg = caboUSBC;
 export const capaSiliconeImg = capaSilicone;
 export const carregadorUSBImg = carregadorUSB;
 export const magicMouseImg = magicMouse;
-export const smartKeyboardImg = smartKeyboard;  
+export const smartKeyboardImg = smartKeyboard;
+export const purchaseImg = purchase;  
 

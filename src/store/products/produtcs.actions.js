@@ -1,13 +1,9 @@
-export function addProduct (value){
-    return {
+export const addProduct = value => ({
         type:'ADD_PRODUCT',
         value: value
-    }
-}
+});
 
-export function removeProduct (value){
-    return {
+export const removeProduct = value => ({
         type:'REMOVE_PRODUCT',
         value: value
-    }
-}
+});

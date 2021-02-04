@@ -44,3 +44,7 @@
 .img {
     object-fit: fill;
 }
+
+.small-letter {
+    font-size: smaller;
+}

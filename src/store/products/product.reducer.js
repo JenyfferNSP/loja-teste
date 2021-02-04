@@ -1,17 +1,23 @@
-  export default function productReducer (state = 0, action) {
+const initialState = {
+    value: 0
+  };
+  
+  export default function (state = initialState.value, action) {
       switch (action.type) {
-          case "ADD_PRODUCT":
+          case 'ADD_PRODUCT':
+            console.log(action.value, 'add')
               return {
-                  ...state, 
-                  value: action.value + 1
-              };
-          case "REMOVE_PRODUCT":
+                  ...state,
+                  state: action.value
+              }
+          case 'REMOVE_PRODUCT':
               if(action.value > 0){
+                console.log(action.value, 'remove')
                 return {
                     ...state,
-                    value: action.value - 1
-                };
+                    state: action.value
               }
+            }
           default:
             return state;
       }

@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "./clientForm.css";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
-import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom'
 
 const sexo = [
   {
@@ -16,7 +17,7 @@ const sexo = [
   }
 ];
 
-function ClientForm() {
+function ClientForm({total}) {
     return (
       <div>
         <h3>Dados do Cliente</h3>
@@ -26,10 +27,7 @@ function ClientForm() {
             <TextField
               id="outlined-inputNome"
               label="Nome"
-              defaultValue="Nome do cliente aqui"
-              InputProps={{
-                readOnly: true,
-              }}
+              placeholder="Nome do cliente aqui"
               variant="outlined"
               className="input-name"
             />
@@ -38,10 +36,7 @@ function ClientForm() {
             <TextField
               id="outlined-inputEmail"
               label="Email"
-              defaultValue="Digite seu email aqui"
-              InputProps={{
-                readOnly: true,
-              }}
+              placeholder="Digite seu email aqui"
               variant="outlined"
               className="input-email"
             />
@@ -69,12 +64,19 @@ function ClientForm() {
         </form>
         <div className="footer">
           <h2>Total:</h2>
+          <span></span>
           <Button variant="contained" id="finalButton">
-            Finalizar Compra
+            <Link to="/confirm-buy" id="link">Finalizar Compra</Link>
           </Button>
         </div>
       </div>
     );
 }
 
-export default ClientForm;
+function mapStateToProps(state){
+  return {
+    total: state.product
+  }
+}
+
+export default connect(mapStateToProps)(ClientForm);

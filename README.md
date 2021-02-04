@@ -1,11 +1,8 @@
 # Loja Teste: Teste X-Brain para Front-end Jr
 
-Este é um projeto construído com React.js utilizando a biblioteca de Design "Material UI" e "Redux" para gerenciamento de estado da aplicação
+Este é um projeto construído com React.js utilizando a biblioteca de Design "Material UI", "Redux" para gerenciamento de estado da aplicação e React-Router-DOM para rotas entre telas.
 
 ## Instalando o projeto:
-
-Funciona com NPM ou Yarn
-
 ### `yarn` ou  `npm install`
 
 ## Iniciando a aplicação:
