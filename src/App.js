@@ -3,7 +3,7 @@ import React from "react";
 import Card from './components/card/card';
 import ClientForm from './components/clientForm/clientForm';
 
-function App (){
+function App() {
     return (
     <div className="responsiveBox">
       <section>
@@ -18,6 +18,6 @@ function App (){
       </section>
     </div>
     )
-};
+  };
 
 export default App;

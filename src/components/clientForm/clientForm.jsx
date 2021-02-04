@@ -3,20 +3,20 @@ import "./clientForm.css";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from "@material-ui/core/Button";
+import { Field, reduxForm } from 'redux-form';
 
 const sexo = [
   {
-    value: "Female",
-    label: "Feminino",
+      value: "FEMALE",
+      label: "Feminino",
   },
   {
-    value: "Male",
-    label: "Masculino",
-  },
+      value: "MALE",
+      label: "Masculino",
+  }
 ];
 
-export default class ClientForm extends Component {
-  render() {
+function ClientForm() {
     return (
       <div>
         <h3>Dados do Cliente</h3>
@@ -24,7 +24,6 @@ export default class ClientForm extends Component {
         <form className="formControl" noValidate autoComplete="off">
           <div className="space-between">
             <TextField
-              // error
               id="outlined-inputNome"
               label="Nome"
               defaultValue="Nome do cliente aqui"
@@ -32,7 +31,6 @@ export default class ClientForm extends Component {
                 readOnly: true,
               }}
               variant="outlined"
-              // helperText="Campo Obrigatório"
               className="input-name"
             />
           </div>
@@ -53,13 +51,16 @@ export default class ClientForm extends Component {
               id="outlined-select-sexo"
               select
               label="Sexo"
-              value={sexo}
-              // onChange={handleChange}
+              value={sexo.value}
+              // onChange= {handleChange}
               variant="outlined"
               className="select"
             >
               {sexo.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
+                <MenuItem 
+                key={option.value} 
+                value={option.value}
+                >
                   {option.label}
                 </MenuItem>
               ))}
@@ -68,11 +69,12 @@ export default class ClientForm extends Component {
         </form>
         <div className="footer">
           <h2>Total:</h2>
-          <Button variant="contained">
+          <Button variant="contained" id="finalButton">
             Finalizar Compra
           </Button>
         </div>
       </div>
     );
-  }
 }
+
+export default ClientForm;

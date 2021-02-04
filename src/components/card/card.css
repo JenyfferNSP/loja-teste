@@ -17,14 +17,31 @@
     height: inherit;
 }
 
+.actionBox {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#standard-basic-input {
+    width: 90px;
+    text-align: center;
+}
+
+.MuiTypography-root {
+    min-height: 45px;
+}
+
+#buttonAdd {
+    width: -webkit-fill-available;
+    margin-top: 10px;
+    background-color: #019cdf;
+    color: white;
+    font-weight: bold;
+}
+
 .img {
     width: fit-content;
     height: fit-content;
-}
-
-.transparent-box {
-    z-index: 1;
-    position: relative;
-    width: inherit;
-    height: 50%;
 }
