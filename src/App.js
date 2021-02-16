@@ -1,23 +1,41 @@
 import './App.css';
 import React from "react";
-import Card from './components/card/card';
+import CardItem from './components/card/card';
 import ClientForm from './components/clientForm/clientForm';
+import produtos from './produtos';
+import { Provider } from 'react-redux';
+import Store from './store';
 
-function App() {
+
+
+class App extends React.Component {
+
+  constructor(props){
+    super(props)
+
+    this.state = {
+      produtos: [...produtos]
+    }
+  }
+  render(){
     return (
-    <div className="responsiveBox">
-      <section>
-        <h3>Produtos</h3>
-        <hr></hr>
-        <div>
-          <Card></Card>
-        </div>
-      </section>
-      <section>
-        <ClientForm></ClientForm>
-      </section>
-    </div>
-    )
-  };
+      <div className="responsiveBox">
+        <Provider store={Store}>
+        <section>
+          <h3>Produtos</h3>
+          <hr></hr>
+          <div>
+            <CardItem produtos={this.state.produtos}></CardItem>
+          </div>
+        </section>
+        <section>
+          <ClientForm></ClientForm>
+        </section>
+        </Provider>
+      </div>
+      )
+    };
+  }
+    
 
 export default App;
