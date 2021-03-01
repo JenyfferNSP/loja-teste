@@ -1,21 +1,20 @@
-export function addProduct (quantity){
+export function addProduct (quantidade){
 	return {
 		type:'ADD_PRODUCT',
-		quantity, 
+		quantidade
 	}
 };
 
-export function removeProduct (quantity) {
+export function removeProduct (quantidade) {
 	return {
 		type:'REMOVE_PRODUCT',
-		quantity,
+		quantidade
 	}
 };
 
-export function addToCart (quantity, value) {
+export function addToCart (value) {
 	return {
 		type: 'ADD_CART',
-		quantity, 
 		value,
 	}
 }

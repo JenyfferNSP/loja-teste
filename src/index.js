@@ -12,7 +12,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route path="/" exact={true} component={App} />
-        <Route path="/confirm-buy" component={ConfirmBuy} />
+        <Route path="/confirm-buy" component={ConfirmBuy}/>
       </Switch>
     </BrowserRouter>
   </Provider>,

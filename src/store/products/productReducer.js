@@ -1,7 +1,9 @@
 import produtos from "../../produtos";
+import form from "../../components/clientForm/clientForm";
 
 const INITIAL_STATE = {
-  quantity: 0,
+  quantidade: 0,
+  form: form,
   produtos: [...produtos],
   totalCart: 0,
 };
@@ -11,23 +13,25 @@ function productReducer(state = INITIAL_STATE, action) {
     case "ADD_PRODUCT":
       return {
         ...state,
-        quantity: state.quantity + 1,
+        quantidade: state.quantidade + 1,
       };
     case "REMOVE_PRODUCT":
-      if (state.quantity > 0) {
+      if (state.itensCart > 0) {
         return {
           ...state,
-          quantity: state.quantity - 1,
+          quantidade: state.quantidade - 1,
+        };
+      }
+    case "ADD_CART":
+      if(state.quantidade > 0){
+        return {
+          ...state,
+          totalCart: state.totalCart + (state.quantidade * action.value),
         };
       }
     default:
       return state;
   }
 }
-
-const mapStateToProps = (state) => ({
-  produtos: state.productReducer.produtos,
-  quantidade: state.productReducer.quantity
-});
 
 export default productReducer;
