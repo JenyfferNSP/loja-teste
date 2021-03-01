@@ -3,9 +3,6 @@ import React from "react";
 import CardItem from './components/card/card';
 import ClientForm from './components/clientForm/clientForm';
 import produtos from './produtos';
-import { Provider } from 'react-redux';
-import Store from './store';
-
 
 
 class App extends React.Component {
@@ -16,11 +13,11 @@ class App extends React.Component {
     this.state = {
       produtos: [...produtos]
     }
+
   }
   render(){
     return (
       <div className="responsiveBox">
-        <Provider store={Store}>
         <section>
           <h3>Produtos</h3>
           <hr></hr>
@@ -31,7 +28,6 @@ class App extends React.Component {
         <section>
           <ClientForm></ClientForm>
         </section>
-        </Provider>
       </div>
       )
     };

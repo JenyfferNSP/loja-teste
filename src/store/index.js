@@ -1,10 +1,11 @@
 import { createStore, combineReducers } from 'redux';
 import productReducer from './products/productReducer';
-import clientFormReducer from './clientForm/clientForm.reducer';
+// import clientFormReducer from './clientForm/clientFormReducer';
+import { reducer as formReducer } from 'redux-form';
 
 const rootReducer = combineReducers({
     productReducer,
-    form: clientFormReducer
+    form: formReducer
 })
 
 const Store = createStore(rootReducer);

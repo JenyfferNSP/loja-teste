@@ -11,6 +11,7 @@ import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import { connect } from "react-redux";
 import * as produtcsActions from "../../store/products/productActions";
+import * as clientFormActions from "../../store/clientForm/clientFormActions"
 
 const smallLetter = {
   fontSize: "small",
@@ -20,7 +21,7 @@ function decimalFix(value) {
   return value.toFixed(2);
 }
 
-const CardItem = ({ produtos, addProduct, removeProduct }) => (
+const CardItem = ({ produtos, quantidade, addProduct, removeProduct, addToCart }) => (
     <div className="cardBox">
       {produtos.map((produto) => {
         return (
@@ -52,21 +53,27 @@ const CardItem = ({ produtos, addProduct, removeProduct }) => (
                   </span>
                 </Typography>
                 <div className="actionBox">
-                  <IconButton onClick = {() => removeProduct(produto.quantidade)}>
+                  <IconButton onClick = {() => removeProduct(produto.id)}>
                     <RemoveCircleIcon />
                   </IconButton>
                   <form noValidate autoComplete="off">
                     <TextField
                       id="standard-basic-input"
                       type="number"
-                      value={produto.quantidade}
+                      value={quantidade}
+                      key={produto.id}
                     ></TextField>
                   </form>
-                  <IconButton onClick = {() => addProduct(produto.quantidade)}>
+                  <IconButton onClick = {() => addProduct(produto.id)}>
                     <AddCircleIcon />
                   </IconButton>
                 </div>
-                <Button id="buttonAdd" variant="contained" disableElevation>
+                <Button 
+                  id="buttonAdd"
+                  variant="contained" 
+                  onClick = {() => addToCart()}
+                  disableElevation
+                 >
                   Adicionar
                 </Button>
               </CardContent>
@@ -79,11 +86,12 @@ const CardItem = ({ produtos, addProduct, removeProduct }) => (
 
 const mapStateToProps = (state) => ({
   produtos: state.productReducer.produtos,
+  quantidade: state.productReducer.quantity
 });
 
 const mapDispatchToProps = dispatch => ({
-  addProduct: (quantity) => dispatch(produtcsActions.addProduct(quantity)),
-  removeProduct: (quantity) => dispatch(produtcsActions.removeProduct(quantity))
+  addProduct: () => dispatch(produtcsActions.addProduct()),
+  removeProduct: () => dispatch(produtcsActions.removeProduct())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardItem);

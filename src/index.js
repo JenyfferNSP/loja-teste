@@ -1,19 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import ConfirmBuy from './components/confirmBuy/confirmBuy';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ConfirmBuy from "./components/confirmBuy/confirmBuy";
+import { Provider } from "react-redux";
+import Store from "./store";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={Store}>
     <BrowserRouter>
-    <Switch>
-      <Route path="/" exact={true} component={App} />
-      <Route path="/confirm-buy" component={ConfirmBuy} />
-    </Switch>
+      <Switch>
+        <Route path="/" exact={true} component={App} />
+        <Route path="/confirm-buy" component={ConfirmBuy} />
+      </Switch>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById("root")
 );
-
